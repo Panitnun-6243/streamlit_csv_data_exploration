@@ -6,6 +6,8 @@ text_data = st.text_input('Your github url', "", placeholder="e.g., https://raw.
 if text_data == "":
     st.info("We didn't receive any data, please type your github url in text box")
 else:
-    st.subheader("CSV data")
+    st.header("CSV data")
+    #read dataframe
     df = pd.read_csv(text_data)
     st.write(df)
+
